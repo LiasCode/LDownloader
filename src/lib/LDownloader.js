@@ -23,13 +23,15 @@ const question = (newQuestion = "") => {
   });
 };
 
-(async function () {
+(async function() {
   console.clear();
 
   const urlVideo = await question("Inserte la URL del video -> ");
   readLineInterface.close();
 
-  const outputDirection = path.join(__dirname, "output");
+  const outputDirection = process.cwd() + "/output";
+
+  console.log({ outputDirection });
 
   const info = await ytdl.getInfo(urlVideo);
 
@@ -76,12 +78,12 @@ const question = (newQuestion = "") => {
 
   const writeStream = fs.createWriteStream(
     outputDirection +
-      "/" +
-      videoName +
-      "-" +
-      videoQualityNameTag +
-      "." +
-      FormatSelected.container
+    "/" +
+    videoName +
+    "-" +
+    videoQualityNameTag +
+    "." +
+    FormatSelected.container
   );
 
   let tamanoDescargado = 0;
