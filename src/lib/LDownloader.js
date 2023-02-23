@@ -31,6 +31,10 @@ const question = (newQuestion = "") => {
 
   const outputDirection = process.cwd() + "/output";
 
+  if (!fs.existsSync(outputDirection)) {
+    fs.mkdirSync(outputDirection);
+  }
+
   console.log({ outputDirection });
 
   const info = await ytdl.getInfo(urlVideo);
@@ -145,7 +149,7 @@ const question = (newQuestion = "") => {
         ).toFixed(2)} mb`
       );
     }
-    console.log(`↪ 🚀 Speed : ${velocidadDescarga} kB`);
+    console.log(`↪ 🚀 Speed : ${velocidadDescarga} kB/s`);
     console.log(`↪ 🏃 Progress : ${porcentajeDescarga} %`);
   });
 
