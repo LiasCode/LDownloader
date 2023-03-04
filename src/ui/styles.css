@@ -101,7 +101,6 @@ form > button {
   border: none;
 }
 
-
 #linksList {
   width: 100%;
   height: auto;
@@ -121,7 +120,7 @@ form > button {
   width: 100%;
   margin: 5px;
   border-bottom: 1px dashed #fff;
-  color : #fff;
+  color: #fff;
 }
 
 #initDownload {

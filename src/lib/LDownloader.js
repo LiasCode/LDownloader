@@ -23,7 +23,7 @@ const question = (newQuestion = "") => {
   });
 };
 
-(async function() {
+(async function () {
   console.clear();
 
   const urlVideo = await question("Inserte la URL del video -> ");
@@ -82,12 +82,12 @@ const question = (newQuestion = "") => {
 
   const writeStream = fs.createWriteStream(
     outputDirection +
-    "/" +
-    videoName +
-    "-" +
-    videoQualityNameTag +
-    "." +
-    FormatSelected.container
+      "/" +
+      videoName +
+      "-" +
+      videoQualityNameTag +
+      "." +
+      FormatSelected.container
   );
 
   let tamanoDescargado = 0;
