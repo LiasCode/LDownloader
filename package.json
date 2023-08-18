@@ -19,6 +19,8 @@
     "ytdl-core": "^4.11.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
     "live-server": "^1.2.2"
   }
 }
